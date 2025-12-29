@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver  # MySQL 8.x驱动（5.x是com.mysql.jdbc.Driver）
+    url: jdbc:mysql://localhost:3306/procurement_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root  # MySQL账号
+    password: 123456  # MySQL密码
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # 第一次用create，之后用update（不会删数据）；validate是校验表结构
+    show-sql: true  # 打印SQL日志
+    properties:
+      format_sql: true
